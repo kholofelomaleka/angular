@@ -63,7 +63,30 @@ PART 2 - WHAT IS A COMPONENT?
     $ ng serve
 
 
-PART 3 - WHAT IS DATA BINDING? 
+PART 3 - WHAT IS DATA BINDING? (Binding data to the template)
 
+- Declare Variables / State in Component
+ -> Varibales are created in the Components Class
+ -> Class can also have an optional constructor used to access the variables created.
+
+- Data Binding
+ -> One Way Data Binding
+    --> iterpolation - displaying variables using curly brackets, e.g.:
+        {{ value }}
+
+    --> propertyBinding
+
+    --> event Binding
     
-  
+
+ -> Two Way Data Binding
+    --> Using the ngModel directive
+    
+
+
+
+- Installing Bootstrap (For part 3 example)
+    1. download the bootstrap for: https://www.npmjs.com
+    2. terminal -> $ npm i bootstrap
+    3. go to pakage.json, check if entry is added.
+    4. add link to the bootstrap to the angular.json ("styles").
