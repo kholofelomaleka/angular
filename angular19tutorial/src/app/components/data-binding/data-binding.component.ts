@@ -11,18 +11,18 @@ export class DataBindingComponent {
   
   firstName: string = "John";
   lastName: string = "Dell";
-  rollNo: number = 121;
+  rowNo: number = 121;
   isActive: boolean = true;
   currentDate: Date = new Date();
   myPlaceholder: string = "Enter your full name";
-  div1ClassName: string = "bg-primary";
+  div1ClassName: string = "bg-primary"; // bg-primary is a Bootstrap class, it sets the background color to primary.
   selectedCity: string = "";
 
   // Optional constructor
   constructor() {
 
     console.log(this.firstName);
-    console.log(this.rollNo);
+    console.log(this.rowNo);
     console.log(this.isActive);
     console.log(this.currentDate);
   
@@ -31,12 +31,13 @@ export class DataBindingComponent {
     //this.showWelcomeMessage(); // Call the method to show welcome message
 
   }
-
+  // Method / Function to show a welcome message
   showWelcomeMessage(){
     alert("Welcome to Angular 19 Tutorial!");
   }
-
+  // Method / Function to handle the click event
   onCityChange() {
-    console.log("City changed!");
+    // console.log("City changed!");
+    alert("City changed to: " + this.selectedCity);
   }
 }

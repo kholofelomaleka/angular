@@ -55,6 +55,11 @@ PART 2 - WHAT IS A COMPONENT?
             export class AppComponent {
               title = 'angular19tutorial';
             }
+        - Variables for classes are also created in a Component's Class.
+        - Functions are also create here.
+    - Constructor (optional)
+        - Access variables declared in the Component Class
+
  -> How to Render the Component
   --> Once the components are created, they must be RENDERED:
     ---> Add the new component Class Name to the imports section in the @Component decorator.
@@ -71,16 +76,22 @@ PART 3 - WHAT IS DATA BINDING? (Binding data to the template)
 
 - Data Binding
  -> One Way Data Binding
-    --> iterpolation - displaying variables using curly brackets, e.g.:
+    --> iterpolation - Accessing / displaying variables using curly brackets, e.g.:
         {{ value }}
 
-    --> propertyBinding
+    --> propertyBinding:
+        - All html elements have properties / attributes e.g. type, name, id...
+        - We can provide values from variables to these attributes by wrapping them with square brackets, e.g.:
+            <input type="text" [value]="varName" ...> - When the textbox renders, it will render the variable value.
 
     --> event Binding
-    
-
+        - Because html is interactive, all events (user actions, button click, key presses...) can lead to a response 
+          from the application.
+          
  -> Two Way Data Binding
     --> Using the ngModel directive
+        - ngModel, which allows for two-way data binding. 
+          Any changes made in the input will update the firstName property, and vice versa.
     
 
 

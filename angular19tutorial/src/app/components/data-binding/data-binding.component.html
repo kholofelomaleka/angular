@@ -5,49 +5,51 @@
         <h3>1. Interpolation</h3>
 
         <div><p>First Name: {{ firstName }}</p></div>
-        <div><p>Row Number: {{ rollNo }}</p></div>
+        <div><p>Row Number: {{ rowNo }}</p></div>
         <span><p>Last Name: {{ lastName }}</p></span>
         <span><p>Is Active: {{ isActive }}</p></span>
     </div>
     
     <div class="col-6">
-
+        <h3>2. Property Binding</h3>
         <input type="text" [value]="firstName" name="" id="">
         <br>
         <input type="text" [placeholder]="myPlaceholder" name="" id="">
         <br>
-        <div [class]="div1ClassName" style="height: 100px;width: 100px;">
-
+        <div [class]="div1ClassName" style="height: 100px;width: 200px;">
+            -> This div's class is bound to a property, It uses property binding to set the class dynamically.
         </div>
-
     </div>        
 </div>
 <div class="row">
     <div class="col-3">
+        <h3>3. Event Binding</h3>
         <button class="btn btn-success" (click)="showWelcomeMessage()">Show Welcome Message</button>
     </div>
     <div class="col-3">
+        <!-- Default city option 
         <select (change)="onCityChange()">
             <option value="Cape Town">Cape Town</option>
             <option value="Durban">Durban</option>
             <option value="Johannesburg">Johannesburg</option>
             <option value="Pretoria">Pretoria</option>
             <option value="Port Elizabeth">Port Elizabeth</option>
-        </select>
+        </select>-->
     </div>
 </div>
 <div class="row">
     <div class="col-3">
-        <input type="text" [(ngModel)]="firstName">
-    </div>
-    <div class="col-3">
-        <select [(ngModel)]="selectedCity">
+        <h3>4. Two-way Data Binding</h3>
+        <h4>ngModel</h4>
+        <input type="text" [(ngModel)]="firstName"> - This input is bound to the firstName property using ngModel, which allows for two-way data binding. Any changes made in the input will update the firstName property, and vice versa.
+        <br>
+         <select [(ngModel)]="selectedCity">
             <option value="Cape Town">Cape Town</option>
             <option value="Durban">Durban</option>
             <option value="Johannesburg">Johannesburg</option>
             <option value="Pretoria">Pretoria</option>
             <option value="Port Elizabeth">Port Elizabeth</option>
-        </select>
-        - {{ selectedCity }}
+        </select> 
+        <button class="btn btn-success" (click)="onCityChange()">Confirm City</button>
     </div>
 </div>
