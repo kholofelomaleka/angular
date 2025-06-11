@@ -94,6 +94,16 @@ PART 3 - WHAT IS DATA BINDING? (Binding data to the template)
           Any changes made in the input will update the firstName property, and vice versa.
     
 
+PART 4 - STRUCTURAL DIRECTIVES
+
+
+- What is a directive
+
+- Types of Directives
+
+- What are Structural Directives:
+    -> ngIf - Used to hide and show 
+    -> ngFor - Used like for loop, dynamically create new elements, through iteration.
 
 
 - Installing Bootstrap (For part 3 example)
